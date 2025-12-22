@@ -1,0 +1,531 @@
+// ============================================
+// ANIMATIONS GLOBALES - AtlasSun E-commerce
+// ============================================
+
+// FADE ANIMATIONS
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// SLIDE ANIMATIONS
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// ZOOM ANIMATIONS
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// 3D ANIMATIONS
+@keyframes rotate3D {
+    from {
+        opacity: 0;
+        transform: perspective(1000px) rotateY(-180deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(1000px) rotateY(0);
+    }
+}
+
+@keyframes flip {
+    from {
+        transform: perspective(800px) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(800px) rotateY(180deg);
+    }
+}
+
+@keyframes flipIn {
+    from {
+        opacity: 0;
+        transform: perspective(800px) rotateX(-90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(800px) rotateX(0deg);
+    }
+}
+
+// BOUNCE ANIMATIONS
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+// PULSE & GLOW
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(212, 166, 80, 0.5),
+            0 0 10px rgba(212, 166, 80, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(212, 166, 80, 0.8),
+            0 0 30px rgba(212, 166, 80, 0.5),
+            0 0 40px rgba(212, 166, 80, 0.3);
+    }
+}
+
+@keyframes glowBlue {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(26, 76, 139, 0.5),
+            0 0 10px rgba(26, 76, 139, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(26, 76, 139, 0.8),
+            0 0 30px rgba(26, 76, 139, 0.5),
+            0 0 40px rgba(26, 76, 139, 0.3);
+    }
+}
+
+// SHAKE ANIMATION
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+// FLOAT ANIMATION
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes floatRotate {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+// RIPPLE EFFECT
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+// SHIMMER EFFECT
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+// REVEAL ANIMATIONS
+@keyframes reveal {
+    from {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes revealUp {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 0 0 0);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+// TYPEWRITER EFFECT
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+// CONFETTI PARTICLES
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+// LOADER ANIMATIONS
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dots {
+
+    0%,
+    20% {
+        color: transparent;
+        text-shadow: 0.25em 0 0 transparent, 0.5em 0 0 transparent;
+    }
+
+    40% {
+        color: currentColor;
+        text-shadow: 0.25em 0 0 transparent, 0.5em 0 0 transparent;
+    }
+
+    60% {
+        text-shadow: 0.25em 0 0 currentColor, 0.5em 0 0 transparent;
+    }
+
+    80%,
+    100% {
+        text-shadow: 0.25em 0 0 currentColor, 0.5em 0 0 currentColor;
+    }
+}
+
+// SCALE ANIMATIONS
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+// ============================================
+// MIXINS POUR FACILITER L'UTILISATION
+// ============================================
+
+@mixin animate($name, $duration: 0.6s, $delay: 0s, $timing: ease-out, $fill: both) {
+    animation: $name $duration $timing $delay $fill;
+}
+
+@mixin fade-in($duration: 0.6s, $delay: 0s) {
+    @include animate(fadeIn, $duration, $delay);
+}
+
+@mixin fade-in-up($duration: 0.6s, $delay: 0s) {
+    @include animate(fadeInUp, $duration, $delay);
+}
+
+@mixin slide-up($duration: 0.6s, $delay: 0s) {
+    @include animate(slideUp, $duration, $delay);
+}
+
+@mixin zoom-in($duration: 0.6s, $delay: 0s) {
+    @include animate(zoomIn, $duration, $delay);
+}
+
+@mixin bounce-in($duration: 0.8s, $delay: 0s) {
+    @include animate(bounceIn, $duration, $delay, cubic-bezier(0.34, 1.56, 0.64, 1));
+}
+
+@mixin rotate-3d($duration: 1s, $delay: 0s) {
+    @include animate(rotate3D, $duration, $delay, cubic-bezier(0.34, 1.56, 0.64, 1));
+}
+
+// STAGGER ANIMATION - Pour animer plusieurs éléments avec délai
+@mixin stagger($item-count, $animation, $base-delay: 0.1s) {
+    @for $i from 1 through $item-count {
+        &:nth-child(#{$i}) {
+            animation-delay: $base-delay * $i;
+        }
+    }
+}
+
+// HOVER EFFECTS
+@mixin hover-lift($distance: -8px) {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY($distance);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@mixin hover-glow($color: #D4A650) {
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0 20px rgba($color, 0.5),
+            0 0 40px rgba($color, 0.3);
+    }
+}
+
+// GLASSMORPHISM EFFECT
+@mixin glass($opacity: 0.1, $blur: 20px) {
+    background: rgba(255, 255, 255, $opacity);
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+}
+
+// SHIMMER BUTTON
+@mixin shimmer-effect {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.5s;
+    }
+
+    &:hover::before {
+        left: 100%;
+    }
+}

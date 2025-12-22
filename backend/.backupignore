@@ -1,0 +1,6 @@
+# Backups MongoDB
+backups/
+*.json
+
+# Logs de backup
+backup-logs/

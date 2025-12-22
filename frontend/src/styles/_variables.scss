@@ -1,0 +1,166 @@
+// ============================================
+// AtlasSun Design System - Variables SCSS
+// Palette Marocaine Premium
+// ============================================
+
+@use 'sass:color';
+
+// ============================================
+// PALETTE DE COULEURS PRINCIPALE
+// ============================================
+
+// Couleurs principales
+$bleu-majorelle: #1A4C8B;
+$or-marocain: #D4A650;
+$blanc-casse: #FAF7F0;
+$noir-cafe: #2A2A2A;
+$rouge-marrakech: #C0392B;
+$gris-sable: #C8C2B5;
+
+// Alias pour usage contextuel
+$primary-color: $bleu-majorelle;
+$secondary-color: $or-marocain;
+$accent-color: $rouge-marrakech;
+
+$background-light: $blanc-casse;
+$background-white: #FFFFFF;
+
+$text-primary: $noir-cafe;
+$text-secondary: color.scale($noir-cafe, $lightness: 30%);
+$text-light: #FFFFFF;
+
+$border-color: $gris-sable;
+$divider-color: color.scale($gris-sable, $lightness: 5%);
+
+// États
+$success-color: #27AE60;
+$warning-color: #F39C12;
+$error-color: #E74C3C;
+$info-color: $bleu-majorelle;
+
+// Variations de couleurs
+$primary-light: color.scale($bleu-majorelle, $lightness: 10%);
+$primary-dark: color.scale($bleu-majorelle, $lightness: -10%);
+
+$secondary-light: color.scale($or-marocain, $lightness: 15%);
+$secondary-dark: color.scale($or-marocain, $lightness: -10%);
+
+$accent-light: color.scale($rouge-marrakech, $lightness: 10%);
+$accent-dark: color.scale($rouge-marrakech, $lightness: -10%);
+
+// ============================================
+// TYPOGRAPHIE
+// ============================================
+
+// Fonts
+$font-heading: 'Cairo', sans-serif;
+$font-body: 'Poppins', sans-serif;
+$font-base-size: 16px;
+
+// Font Sizes
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-md: 1.125rem; // 18px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-2xl: 2rem; // 32px
+$font-size-3xl: 2.5rem; // 40px
+$font-size-4xl: 3rem; // 48px
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line Heights
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// ============================================
+// SPACING
+// ============================================
+
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+$spacing-2xl: 3rem; // 48px
+$spacing-3xl: 4rem; // 64px
+$spacing-4xl: 6rem; // 96px
+
+// ============================================
+// BREAKPOINTS
+// ============================================
+
+$breakpoint-xs: 480px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// ============================================
+// BORDER RADIUS
+// ============================================
+
+$border-radius-sm: 0.25rem; // 4px
+$border-radius-md: 0.5rem; // 8px
+$border-radius-lg: 0.75rem; // 12px
+$border-radius-xl: 1rem; // 16px
+$border-radius-2xl: 1.5rem; // 24px
+$border-radius-full: 9999px;
+
+// ============================================
+// SHADOWS
+// ============================================
+
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+// ============================================
+// TRANSITIONS
+// ============================================
+
+$transition-fast: 150ms;
+$transition-base: 300ms;
+$transition-slow: 500ms;
+
+$transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-ease-in: cubic-bezier(0.4, 0, 1, 1);
+$transition-ease-out: cubic-bezier(0, 0, 0.2, 1);
+$transition-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+// ============================================
+// Z-INDEX
+// ============================================
+
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// ============================================
+// LAYOUT
+// ============================================
+
+$container-max-width: 1280px;
+$header-height: 80px;
+$admin-sidebar-width: 260px;
+
+// ============================================
+// GRID
+// ============================================
+
+$grid-columns: 12;
+$grid-gutter: $spacing-lg;

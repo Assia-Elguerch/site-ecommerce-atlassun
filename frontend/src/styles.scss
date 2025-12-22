@@ -1,0 +1,649 @@
+// ============================================
+// AtlasSun - Global Styles
+// ============================================
+
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+@import 'styles/animations';
+
+// ============================================
+// GOOGLE FONTS
+// ============================================
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// ============================================
+// RESET & BASE STYLES
+// ============================================
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $font-base-size;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-body;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-normal;
+    color: $text-primary;
+    background-color: $background-light;
+    overflow-x: hidden;
+}
+
+// ============================================
+// TYPOGRAPHY
+// ============================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-heading;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    color: $text-primary;
+    margin-bottom: $spacing-md;
+}
+
+h1 {
+    font-size: $font-size-4xl;
+
+    @include respond-to-max('md') {
+        font-size: $font-size-3xl;
+    }
+}
+
+h2 {
+    font-size: $font-size-3xl;
+
+    @include respond-to-max('md') {
+        font-size: $font-size-2xl;
+    }
+}
+
+h3 {
+    font-size: $font-size-2xl;
+
+    @include respond-to-max('md') {
+        font-size: $font-size-xl;
+    }
+}
+
+h4 {
+    font-size: $font-size-xl;
+
+    @include respond-to-max('md') {
+        font-size: $font-size-lg;
+    }
+}
+
+h5 {
+    font-size: $font-size-lg;
+}
+
+h6 {
+    font-size: $font-size-md;
+}
+
+p {
+    margin-bottom: $spacing-md;
+    line-height: $line-height-relaxed;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color $transition-base $transition-ease;
+
+    &:hover {
+        color: $primary-dark;
+        text-decoration: underline;
+    }
+}
+
+strong,
+b {
+    font-weight: $font-weight-bold;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+// ============================================
+// IMAGES
+// ============================================
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// ============================================
+// LISTS
+// ============================================
+
+ul,
+ol {
+    list-style: none;
+}
+
+// ============================================
+// BUTTONS - Global Styles
+// ============================================
+
+button {
+    font-family: inherit;
+}
+
+.btn {
+    @include button-base;
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-base;
+    border-radius: $border-radius-md;
+
+    &.btn-sm {
+        padding: $spacing-sm $spacing-lg;
+        font-size: $font-size-sm;
+    }
+
+    &.btn-lg {
+        padding: $spacing-lg $spacing-2xl;
+        font-size: $font-size-lg;
+    }
+
+    &.btn-primary {
+        @include button-primary;
+    }
+
+    &.btn-secondary {
+        @include button-secondary;
+    }
+
+    &.btn-accent {
+        @include button-accent;
+    }
+
+    &.btn-outline {
+        @include button-outline;
+    }
+
+    &.btn-block {
+        width: 100%;
+        display: flex;
+    }
+}
+
+// ============================================
+// CARDS
+// ============================================
+
+.card {
+    @include card-base;
+
+    &.card-hover {
+        @include hover-lift;
+    }
+}
+
+// ============================================
+// FORMS
+// ============================================
+
+.form-group {
+    margin-bottom: $spacing-lg;
+}
+
+.form-label {
+    display: block;
+    font-family: $font-heading;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-sm;
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+}
+
+.form-control {
+    @include input-base;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232A2A2A' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right $spacing-md center;
+    padding-right: $spacing-2xl;
+}
+
+.form-error {
+    color: $error-color;
+    font-size: $font-size-sm;
+    margin-top: $spacing-xs;
+}
+
+.form-control.is-invalid {
+    border-color: $error-color;
+
+    &:focus {
+        box-shadow: 0 0 0 3px rgba($error-color, 0.1);
+    }
+}
+
+.form-control.is-valid {
+    border-color: $success-color;
+
+    &:focus {
+        box-shadow: 0 0 0 3px rgba($success-color, 0.1);
+    }
+}
+
+// ============================================
+// UTILITIES
+// ============================================
+
+// Container
+.container {
+    @include container;
+}
+
+// Text Alignment
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// Text Colors
+.text-primary {
+    color: $primary-color;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+.text-accent {
+    color: $accent-color;
+}
+
+.text-muted {
+    color: $text-secondary;
+}
+
+.text-white {
+    color: $text-light;
+}
+
+// Background Colors
+.bg-primary {
+    background-color: $primary-color;
+}
+
+.bg-secondary {
+    background-color: $secondary-color;
+}
+
+.bg-accent {
+    background-color: $accent-color;
+}
+
+.bg-light {
+    background-color: $background-light;
+}
+
+.bg-white {
+    background-color: $background-white;
+}
+
+// Spacing Utilities
+@each $size, $value in ('xs': $spacing-xs,
+    'sm': $spacing-sm,
+    'md': $spacing-md,
+    'lg': $spacing-lg,
+    'xl': $spacing-xl,
+    '2xl': $spacing-2xl,
+    '3xl': $spacing-3xl) {
+    .m-#{$size} {
+        margin: $value;
+    }
+
+    .mt-#{$size} {
+        margin-top: $value;
+    }
+
+    .mb-#{$size} {
+        margin-bottom: $value;
+    }
+
+    .ml-#{$size} {
+        margin-left: $value;
+    }
+
+    .mr-#{$size} {
+        margin-right: $value;
+    }
+
+    .mx-#{$size} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+
+    .my-#{$size} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+    .p-#{$size} {
+        padding: $value;
+    }
+
+    .pt-#{$size} {
+        padding-top: $value;
+    }
+
+    .pb-#{$size} {
+        padding-bottom: $value;
+    }
+
+    .pl-#{$size} {
+        padding-left: $value;
+    }
+
+    .pr-#{$size} {
+        padding-right: $value;
+    }
+
+    .px-#{$size} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+
+    .py-#{$size} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+}
+
+// Display
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+// Flexbox
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-center {
+    @include flex-center;
+}
+
+.flex-between {
+    @include flex-between;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.gap-sm {
+    gap: $spacing-sm;
+}
+
+.gap-md {
+    gap: $spacing-md;
+}
+
+.gap-lg {
+    gap: $spacing-lg;
+}
+
+.gap-xl {
+    gap: $spacing-xl;
+}
+
+// Border Radius
+.rounded-sm {
+    border-radius: $border-radius-sm;
+}
+
+.rounded-md {
+    border-radius: $border-radius-md;
+}
+
+.rounded-lg {
+    border-radius: $border-radius-lg;
+}
+
+.rounded-xl {
+    border-radius: $border-radius-xl;
+}
+
+.rounded-full {
+    border-radius: $border-radius-full;
+}
+
+// Shadows
+.shadow-sm {
+    box-shadow: $shadow-sm;
+}
+
+.shadow-md {
+    box-shadow: $shadow-md;
+}
+
+.shadow-lg {
+    box-shadow: $shadow-lg;
+}
+
+.shadow-xl {
+    box-shadow: $shadow-xl;
+}
+
+.shadow-none {
+    box-shadow: none;
+}
+
+// Width
+.w-full {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+// Height
+.h-full {
+    height: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+
+// Position
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-sticky {
+    position: sticky;
+}
+
+// Overflow
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+// Cursor
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Text Transform
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+// Font Weight
+.font-light {
+    font-weight: $font-weight-light;
+}
+
+.font-normal {
+    font-weight: $font-weight-normal;
+}
+
+.font-medium {
+    font-weight: $font-weight-medium;
+}
+
+.font-semibold {
+    font-weight: $font-weight-semibold;
+}
+
+.font-bold {
+    font-weight: $font-weight-bold;
+}
+
+// Truncate
+.truncate {
+    @include truncate;
+}
+
+// ============================================
+// ANIMATIONS
+// ============================================
+
+.fade-in {
+    @include fade-in;
+}
+
+.slide-up {
+    @include slide-up;
+}
+
+// ============================================
+// RESPONSIVE UTILITIES
+// ============================================
+
+@include respond-to-max('md') {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@include respond-to('md') {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+@include respond-to('md') {
+    .show-mobile {
+        display: none !important;
+    }
+}
