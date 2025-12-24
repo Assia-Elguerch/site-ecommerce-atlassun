@@ -104,9 +104,10 @@ interface FAQCategory {
               </div>
             </div>
 
-            <!-- Support Card - ENHANCED GRADIENT AS REQUESTED -->
+            <!-- Support Card - PREMIUM REDESIGNED -->
             <div class="support-cta">
               <div class="cta-glass-effect"></div>
+              <div class="cta-decoration"></div>
               <div class="cta-content">
                 <h3>Toujours besoin d'assistance ? 🤝</h3>
                 <p>Nos conseillers sont disponibles pour répondre à toutes vos interrogations spécifiques.</p>
@@ -405,30 +406,49 @@ interface FAQCategory {
       font-size: 1rem;
     }
 
-    /* Support CTA - ENHANCED AS REQUESTED */
+    /* Support CTA - PREMIUM REDESIGNED */
     .support-cta {
       position: relative;
-      margin-top: 60px;
+      margin-top: 80px;
       padding: 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: linear-gradient(135deg, #1A4C8B 0%, #2A5C9B 50%, #1a3c6b 100%);
+      background: linear-gradient(135deg, #1A4C8B 0%, #2A5C9B 50%, #D4A650 100%);
       color: white;
       border-radius: 35px;
       overflow: hidden;
-      box-shadow: 0 25px 50px rgba(26, 76, 139, 0.2);
+      box-shadow: 0 25px 60px rgba(26, 76, 139, 0.3),
+                  0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .support-cta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 35px 80px rgba(26, 76, 139, 0.4),
+                  0 0 0 1px rgba(255, 255, 255, 0.2) inset;
     }
 
     .cta-glass-effect {
       position: absolute;
-      top: -50%;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+      backdrop-filter: blur(5px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .cta-decoration {
+      position: absolute;
+      top: -100%;
       right: -10%;
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(212, 166, 80, 0.2) 0%, transparent 70%);
+      background: linear-gradient(135deg, rgba(212, 166, 80, 0.4), rgba(42, 92, 155, 0.3));
       border-radius: 50%;
-      pointer-events: none;
+      filter: blur(80px);
+      animation: float 8s ease-in-out infinite;
+      z-index: 1;
     }
 
     .cta-content {
@@ -441,10 +461,11 @@ interface FAQCategory {
       font-size: 1.8rem;
       font-weight: 800;
       margin-bottom: 12px;
+      color: white;
     }
 
     .cta-content p {
-      opacity: 0.9;
+      color: rgba(255, 255, 255, 0.95);
       max-width: 480px;
       font-size: 1.05rem;
     }
