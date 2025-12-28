@@ -84,7 +84,7 @@ Pour démarrer l'application en mode développement :
 2. **Démarrer l'Interface Client (Frontend)** :
    ```bash
    cd frontend
-   npm run start
+   ng serve
    ```
    L'application sera lancée sur `http://localhost:4200`.
 
